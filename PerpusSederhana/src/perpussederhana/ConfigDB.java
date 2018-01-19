@@ -23,7 +23,7 @@ import net.sf.jasperreports.view.JasperViewer;
 public class ConfigDB {
 private String Password="";
 private String Username="root";
-private String Database="dbfilm";
+private String Database="perpus";
     
     public Connection koneksi;
 
