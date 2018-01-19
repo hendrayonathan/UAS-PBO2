@@ -10,7 +10,7 @@ import java.sql.*;
 
 public class formBuku extends javax.swing.JFrame {
 
-String judulKolom[] = {"Nomor Buku","Judul","Jenis Buku","Tahun","Pengarang"};
+String judulKolom[] = {"Nomor Buku","Judul","Pengarang","Tahun","Jenis Buku"};
 String sqlBuku = "SELECT*from buku";
 int lebarKolom[] = {100,150,200,60,100};
     
@@ -179,7 +179,7 @@ public formBuku() {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(cmbJenis, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(74, 74, 74)
-                                        .addComponent(btnSimpan)
+                                        .addComponent(btnSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(btnUbah)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -259,7 +259,7 @@ public formBuku() {
         JOptionPane.showMessageDialog(null,"Judul buku belum diisi");
         txtJudul.requestFocus();
         } else
-        if (String.valueOf(cmbJenis.getSelectedItem())==".: Pilih Judul :."){
+        if (String.valueOf(cmbJenis.getSelectedItem())==".: Pilih Jenis Buku:."){
         JOptionPane.showMessageDialog(null,"Jenis Buku belum diisi");
         cmbJenis.requestFocus();
         } else
@@ -275,13 +275,14 @@ public formBuku() {
         ResultSet rs = st.executeQuery("SELECT*FROM buku WHERE NoBuku='"+txtNoBuku.getText()+"'");
         if (rs.next()){
         txtJudul.setText(rs.getString("Judul"));
-        cmbJenis.setSelectedItem(String.valueOf(rs.getString("Jenis")));
-        txtTahun.setText(rs.getString("Tahun"));
         txtPengarang.setText(rs.getString("Pengarang"));
+        txtTahun.setText(rs.getString("Tahun"));
+        cmbJenis.setSelectedItem(String.valueOf(rs.getString("JenisBuku")));
         }
         }else{
-        String SQL="INSERT INTO buku VALUES ('"+txtNoBuku.getText()+"','"+txtJudul.getText()+"','"+
-        String.valueOf(cmbJenis.getSelectedItem()) +"','"+txtTahun.getText()+"','"+txtPengarang.getText()+"')";
+        String SQL="INSERT INTO buku VALUES ('"+txtNoBuku.getText()+"','"+txtJudul.getText()
+        +"','"+txtPengarang.getText()+"','"+txtTahun.getText()+"','"+
+        String.valueOf(cmbJenis.getSelectedItem()) +"')";
         new ConfigDB().simpanData(SQL);
         new ConfigDB().tampilTabel(judulKolom, sqlBuku, JTableBuku);
         new ConfigDB().aturLebarKolom(JTableBuku, lebarKolom);
@@ -368,9 +369,9 @@ public formBuku() {
         int baris = JTableBuku.getSelectedRow();
         txtNoBuku.setText(String.valueOf(JTableBuku.getValueAt(baris,0)));
         txtJudul.setText(String.valueOf(JTableBuku.getValueAt(baris,1)));
-        cmbJenis.setSelectedItem(String.valueOf(JTableBuku.getValueAt(baris,2)));
+        txtPengarang.setText(String.valueOf(JTableBuku.getValueAt(baris,2)));
         txtTahun.setText(String.valueOf(JTableBuku.getValueAt(baris,3)));
-        txtPengarang.setText(String.valueOf(JTableBuku.getValueAt(baris,4)));
+        cmbJenis.setSelectedItem(String.valueOf(JTableBuku.getValueAt(baris,2)));
         }
     catch (Exception e) {
         System.out.print(e.toString());
