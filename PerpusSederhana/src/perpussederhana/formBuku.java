@@ -10,9 +10,9 @@ import java.sql.*;
 
 public class formBuku extends javax.swing.JFrame {
 
-String judulKolom[] = {"Nomor Buku","Judul","Pengarang","Tahun","Jenis Buku"};
+String judulKolom[] = {"Nomor Buku","Judul","Jenis Buku","Tahun","Pengarang"};
 String sqlBuku = "SELECT*from buku";
-int lebarKolom[] = {100,200,300,60,100};
+int lebarKolom[] = {100,150,200,60,100};
     
 public formBuku() {
         initComponents();
@@ -99,6 +99,11 @@ public formBuku() {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        JTableBuku.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JTableBukuMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(JTableBuku);
 
         btnSimpan.setText("SIMPAN");
@@ -269,7 +274,7 @@ public formBuku() {
         Statement st = new ConfigDB().koneksi.createStatement();
         ResultSet rs = st.executeQuery("SELECT*FROM buku WHERE NoBuku='"+txtNoBuku.getText()+"'");
         if (rs.next()){
-        txtJudul.setText(rs.getString("judul"));
+        txtJudul.setText(rs.getString("Judul"));
         cmbJenis.setSelectedItem(String.valueOf(rs.getString("Jenis")));
         txtTahun.setText(rs.getString("Tahun"));
         txtPengarang.setText(rs.getString("Pengarang"));
@@ -357,6 +362,20 @@ public formBuku() {
         new ConfigDB().tampilTabel(judulKolom, sqlBuku, JTableBuku);
         new ConfigDB().aturLebarKolom(JTableBuku, lebarKolom);
     }//GEN-LAST:event_btnRefreshActionPerformed
+
+    private void JTableBukuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JTableBukuMouseClicked
+     try {
+        int baris = JTableBuku.getSelectedRow();
+        txtNoBuku.setText(String.valueOf(JTableBuku.getValueAt(baris,0)));
+        txtJudul.setText(String.valueOf(JTableBuku.getValueAt(baris,1)));
+        cmbJenis.setSelectedItem(String.valueOf(JTableBuku.getValueAt(baris,2)));
+        txtTahun.setText(String.valueOf(JTableBuku.getValueAt(baris,3)));
+        txtPengarang.setText(String.valueOf(JTableBuku.getValueAt(baris,4)));
+        }
+    catch (Exception e) {
+        System.out.print(e.toString());
+        }
+    }//GEN-LAST:event_JTableBukuMouseClicked
 
     /**
      * @param args the command line arguments
