@@ -96,6 +96,11 @@ int lebarKolom[] = {100,100,100,150,300};
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        JTablePinjam.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JTablePinjamMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(JTablePinjam);
 
         btnSimpan.setText("PROSES PINJAMAN");
@@ -126,22 +131,24 @@ int lebarKolom[] = {100,100,100,150,300};
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 636, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 636, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(31, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtIDPinjam, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtTglPinjam, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
-                                    .addComponent(txtTglKembali, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(36, 36, 36)
+                                    .addComponent(txtTglPinjam, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(txtTglKembali, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(30, 30, 30)
                                 .addComponent(btnSimpan)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(btnHapus)
@@ -149,41 +156,40 @@ int lebarKolom[] = {100,100,100,150,300};
                                 .addComponent(btnClear))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(txtNoBuku, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtIDAnggota, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)))))
-                .addContainerGap(31, Short.MAX_VALUE))
+                                .addComponent(txtIDAnggota, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(txtIDPinjam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(txtIDAnggota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(txtNoBuku, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(4, 4, 4)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtIDPinjam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtTglPinjam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
-                .addGap(5, 5, 5)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtTglKembali, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7))
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtIDAnggota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2))
+                        .addGap(3, 3, 3)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtNoBuku, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4))
+                        .addGap(4, 4, 4)
+                        .addComponent(txtTglPinjam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtTglKembali, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnSimpan)
                         .addComponent(btnHapus)
                         .addComponent(btnClear)))
-                .addContainerGap(174, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(195, Short.MAX_VALUE))
         );
 
         pack();
@@ -228,18 +234,18 @@ int lebarKolom[] = {100,100,100,150,300};
                     txtIDAnggota.setText(rs.getString("IDAnggota"));
                     txtNoBuku.setText(rs.getString("NoBuku"));
                     SimpleDateFormat p = new SimpleDateFormat("yyyy-MM-dd");
-                    txtTglPinjam.setDate(p.parse(rs.getString("tgl_pinjam")));
                     SimpleDateFormat k = new SimpleDateFormat("yyyy-MM-dd");
+                    txtTglPinjam.setDate(p.parse(rs.getString("tgl_pinjam")));
                     txtTglKembali.setDate(k.parse(rs.getString("tgl_kembali")));
                 }
             }else{
                 SimpleDateFormat sdp = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
-                String TGLP =sdp.format(txtTglPinjam.getDate());
                 SimpleDateFormat sdk = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+                String TGLP =sdp.format(txtTglPinjam.getDate());
                 String TGLK =sdk.format(txtTglKembali.getDate());
                 
-                String SQL="INSERT INTO pinjam VALUES ('"+txtIDPinjam.getText()+"','"+txtIDAnggota.getText()
-                +"','"+TGLP+"','"+TGLK+"')";
+                String SQL="INSERT INTO pinjam VALUES ('"+txtIDPinjam.getText()
+                +"','"+txtIDAnggota.getText()+"','"+txtNoBuku.getText()+"','"+TGLP+"','"+TGLK+"')";
                 new ConfigDB().simpanData(SQL);
                 new ConfigDB().tampilTabel(judulPinjam, sqlPinjam, JTablePinjam);
                 new ConfigDB().aturLebarKolom(JTablePinjam, lebarKolom);
@@ -279,6 +285,22 @@ int lebarKolom[] = {100,100,100,150,300};
         txtTglKembali.setDate(null);
         txtTglPinjam.setDate(null);
     }//GEN-LAST:event_btnClearActionPerformed
+
+    private void JTablePinjamMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JTablePinjamMouseClicked
+    try {
+        int baris = JTablePinjam.getSelectedRow();
+        txtIDPinjam.setText(String.valueOf(JTablePinjam.getValueAt(baris,0)));
+        txtIDAnggota.setText(String.valueOf(JTablePinjam.getValueAt(baris,1)));
+        txtNoBuku.setText(String.valueOf(JTablePinjam.getValueAt(baris,2)));
+        SimpleDateFormat sdp = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat sdk = new SimpleDateFormat("yyyy-MM-dd");
+        txtTglPinjam.setDate(sdp.parse(String.valueOf(JTablePinjam.getValueAt(baris,3))));
+        txtTglKembali.setDate(sdk.parse(String.valueOf(JTablePinjam.getValueAt(baris,4))));
+        }
+    catch (Exception e) {
+        System.out.print(e.toString());
+        }
+    }//GEN-LAST:event_JTablePinjamMouseClicked
 
     /**
      * @param args the command line arguments

@@ -371,7 +371,7 @@ public formBuku() {
         txtJudul.setText(String.valueOf(JTableBuku.getValueAt(baris,1)));
         txtPengarang.setText(String.valueOf(JTableBuku.getValueAt(baris,2)));
         txtTahun.setText(String.valueOf(JTableBuku.getValueAt(baris,3)));
-        cmbJenis.setSelectedItem(String.valueOf(JTableBuku.getValueAt(baris,2)));
+        cmbJenis.setSelectedItem(String.valueOf(JTableBuku.getValueAt(baris,4)));
         }
     catch (Exception e) {
         System.out.print(e.toString());
