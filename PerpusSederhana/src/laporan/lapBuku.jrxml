@@ -42,55 +42,115 @@
 		<band height="61" splitType="Stretch">
 			<staticText>
 				<reportElement uuid="39cf2258-e983-4b9a-8f43-9ed48feef5e0" x="30" y="41" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement/>
 				<text><![CDATA[NOMOR BUKU]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="5c2bbdeb-81bd-4c22-b33e-ff8ea9030e03" x="130" y="41" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement/>
 				<text><![CDATA[JUDUL]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="c8239974-45fa-467e-b32c-ebea307b1f1c" x="230" y="41" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement/>
 				<text><![CDATA[PENGARANG]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="68578d64-282c-45e0-a6ca-3bbf56e43c6c" x="330" y="41" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement/>
 				<text><![CDATA[TAHUN]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="a2d48d3e-323d-4e8b-b179-353e79127cad" x="430" y="41" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement/>
 				<text><![CDATA[JENIS BUKU]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="125" splitType="Stretch">
+		<band height="20" splitType="Stretch">
 			<textField>
 				<reportElement uuid="ae13f381-b892-4270-9e18-5dca276dd609" x="30" y="0" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{NoBuku}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="665a2ec4-bf39-4970-aac7-b4f763f950cb" x="130" y="0" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{Judul}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="68795850-92ec-40d7-852f-cc055e05d551" x="230" y="0" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{Pengarang}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="da032609-73e9-4f94-b176-987b45d34ade" x="330" y="0" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{Tahun}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="e0d507a8-81a2-430b-8bcb-aa7b02d325d3" x="430" y="0" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{JenisBuku}]]></textFieldExpression>
 			</textField>

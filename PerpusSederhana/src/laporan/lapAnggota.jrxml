@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a4771688-f156-4ac8-802c-27ff7efe9611">
 	<property name="ireport.zoom" value="1.0"/>
-	<property name="ireport.x" value="241"/>
+	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<queryString language="SQL">
 		<![CDATA[SELECT*FROM anggota]]>
@@ -51,87 +51,183 @@
 		<band height="62" splitType="Stretch">
 			<staticText>
 				<reportElement uuid="714344ae-297f-45ce-a82f-fadc942509c9" x="0" y="41" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement/>
 				<text><![CDATA[ID Anggota]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="d6d8b230-3ea1-480d-8206-18f21668395f" x="100" y="41" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement/>
 				<text><![CDATA[NAMA]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="88d83e31-a0e7-4d47-956c-c9625c45a2a5" x="200" y="41" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement/>
 				<text><![CDATA[ALAMAT]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="837e15aa-12d7-4b25-873a-89d9b195db20" x="300" y="41" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement/>
 				<text><![CDATA[TELEPON]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="56702837-4aed-41a6-b495-2e440d13aacb" x="406" y="41" width="100" height="20"/>
+				<reportElement uuid="56702837-4aed-41a6-b495-2e440d13aacb" x="400" y="41" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement/>
 				<text><![CDATA[KOTA]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="6c40f216-ebb8-4b82-bba0-036ff10b6831" x="506" y="42" width="100" height="20"/>
+				<reportElement uuid="6c40f216-ebb8-4b82-bba0-036ff10b6831" x="500" y="41" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement/>
 				<text><![CDATA[TEMPAT LAHIR]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="dab68f68-2588-4916-b8cd-8a3545281929" x="606" y="41" width="100" height="20"/>
+				<reportElement uuid="dab68f68-2588-4916-b8cd-8a3545281929" x="600" y="41" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement/>
 				<text><![CDATA[TANGGAL LAHIR]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="b031ddad-2ac8-4bc9-9e18-c873d258c5f9" x="706" y="41" width="100" height="20"/>
+				<reportElement uuid="b031ddad-2ac8-4bc9-9e18-c873d258c5f9" x="700" y="41" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement/>
 				<text><![CDATA[JENIS KELAMIN]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="125" splitType="Stretch">
+		<band height="21" splitType="Stretch">
 			<textField>
 				<reportElement uuid="f7404954-a430-41be-b4f5-619ccbdf37a7" x="0" y="0" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{IDAnggota}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="07044288-6abe-4dc0-ad0e-54b785e2d287" x="100" y="4" width="100" height="20"/>
+				<reportElement uuid="07044288-6abe-4dc0-ad0e-54b785e2d287" x="100" y="0" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="86127b86-c21f-4ec4-ac57-01440d4ea0cf" x="200" y="0" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="ae259ea7-5566-420b-a544-fbf94548d57b" x="300" y="0" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{telp}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="5083244a-413f-4b3d-acaf-efe62061f597" x="406" y="0" width="100" height="20"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{kota}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="dd28d9d5-c49b-4f52-891f-0dff40cca46e" x="506" y="0" width="100" height="20"/>
+				<reportElement uuid="dd28d9d5-c49b-4f52-891f-0dff40cca46e" x="500" y="0" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{tempat_lahir}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement uuid="e00c2531-7f5f-4885-a0f5-387df514afe9" x="606" y="0" width="100" height="20"/>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="e00c2531-7f5f-4885-a0f5-387df514afe9" x="600" y="0" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{tgl_lahir}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="4bcae6e5-27ba-4a4b-b622-4079f281e47a" x="706" y="0" width="100" height="20"/>
+				<reportElement uuid="4bcae6e5-27ba-4a4b-b622-4079f281e47a" x="700" y="0" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{jkl}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5083244a-413f-4b3d-acaf-efe62061f597" x="400" y="0" width="100" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{kota}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
