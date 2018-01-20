@@ -34,7 +34,7 @@ public class formLapAnggota extends javax.swing.JFrame {
         jRadioButton2 = new javax.swing.JRadioButton();
         txtIDAnggota = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         btnCetak.setText("Preview");
         btnCetak.addActionListener(new java.awt.event.ActionListener() {
