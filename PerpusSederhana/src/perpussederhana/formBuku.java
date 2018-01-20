@@ -139,6 +139,9 @@ public formBuku() {
 
         txtCari.setName("txtCari"); // NOI18N
         txtCari.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtCariKeyPressed(evt);
+            }
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtCariKeyReleased(evt);
             }
@@ -350,13 +353,7 @@ public formBuku() {
     }//GEN-LAST:event_btnClearActionPerformed
 
     private void txtCariKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCariKeyReleased
-        try {
-            String SQL="SELECT*FROM buku WHERE judul like '%"+txtCari.getText()+"%'";
-            new ConfigDB().cariData(judulKolom, SQL, JTableBuku);
-        }
-        catch (Exception e) {
-            System.out.print(e.toString());
-        }
+      
     }//GEN-LAST:event_txtCariKeyReleased
 
     private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
@@ -377,6 +374,16 @@ public formBuku() {
         System.out.print(e.toString());
         }
     }//GEN-LAST:event_JTableBukuMouseClicked
+
+    private void txtCariKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCariKeyPressed
+      try {
+            String SQL="SELECT*FROM buku WHERE judul like '%"+txtCari.getText()+"%'";
+            new ConfigDB().cariData(judulKolom, SQL, JTableBuku);
+        }
+        catch (Exception e) {
+            System.out.print(e.toString());
+        }
+    }//GEN-LAST:event_txtCariKeyPressed
 
     /**
      * @param args the command line arguments
