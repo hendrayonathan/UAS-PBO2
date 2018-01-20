@@ -43,22 +43,24 @@
                           <Component id="txtAlamat" min="-2" pref="285" max="-2" attributes="0"/>
                           <Component id="txtTGL" min="-2" pref="170" max="-2" attributes="0"/>
                           <Component id="txtNama" alignment="0" min="-2" pref="188" max="-2" attributes="0"/>
-                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="txtKota" alignment="0" pref="164" max="32767" attributes="0"/>
-                              <Component id="txtTelp" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                          <Component id="txtTempat" alignment="0" min="-2" pref="197" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="cmbJKL" min="-2" pref="152" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
-                              <Component id="btnSimpan" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                              <Component id="btnSimpan" min="-2" pref="100" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="btnUbah" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="btnHapus" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="btnClear" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="btnKeluar" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="txtKota" alignment="0" pref="164" max="32767" attributes="0"/>
+                              <Component id="txtTelp" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="txtTempat" alignment="0" min="-2" pref="197" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -122,6 +124,7 @@
                       <Component id="btnUbah" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnHapus" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnClear" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnKeluar" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -301,6 +304,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRefreshActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnKeluar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="KELUAR"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnKeluarActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

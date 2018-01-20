@@ -56,6 +56,7 @@ int lebarKolom[] = {100,200,300,100,150,200,200,150};
         jLabel9 = new javax.swing.JLabel();
         txtCari = new javax.swing.JTextField();
         btnRefresh = new javax.swing.JButton();
+        btnKeluar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -181,6 +182,13 @@ int lebarKolom[] = {100,200,300,100,150,200,200,150};
             }
         });
 
+        btnKeluar.setText("KELUAR");
+        btnKeluar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKeluarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -204,20 +212,22 @@ int lebarKolom[] = {100,200,300,100,150,200,200,150};
                             .addComponent(txtAlamat, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtTGL, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtNama, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(txtKota, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE)
-                                .addComponent(txtTelp, javax.swing.GroupLayout.Alignment.LEADING))
-                            .addComponent(txtTempat, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(cmbJKL, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(66, 66, 66)
-                                .addComponent(btnSimpan)
+                                .addGap(37, 37, 37)
+                                .addComponent(btnSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnUbah)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(btnHapus)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnClear))))
+                                .addComponent(btnClear)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnKeluar))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(txtKota, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE)
+                                .addComponent(txtTelp, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addComponent(txtTempat, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(txtCari, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -266,7 +276,8 @@ int lebarKolom[] = {100,200,300,100,150,200,200,150};
                         .addComponent(btnSimpan)
                         .addComponent(btnUbah)
                         .addComponent(btnHapus)
-                        .addComponent(btnClear)))
+                        .addComponent(btnClear)
+                        .addComponent(btnKeluar)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -462,6 +473,10 @@ int lebarKolom[] = {100,200,300,100,150,200,200,150};
         new ConfigDB().aturLebarKolom(JTableAnggota, lebarKolom);
     }//GEN-LAST:event_btnRefreshActionPerformed
 
+    private void btnKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKeluarActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnKeluarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -501,6 +516,7 @@ int lebarKolom[] = {100,200,300,100,150,200,200,150};
     private javax.swing.JTable JTableAnggota;
     private javax.swing.JButton btnClear;
     private javax.swing.JButton btnHapus;
+    private javax.swing.JButton btnKeluar;
     private javax.swing.JButton btnRefresh;
     private javax.swing.JButton btnSimpan;
     private javax.swing.JButton btnUbah;
